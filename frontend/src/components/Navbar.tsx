@@ -41,7 +41,7 @@ const Navbar = () => {
           className="text-2xl font-bold inline-flex gap-[1.125rem] items-center justify-center"
         >
           <img className="w-6 h-6" src={EchoLinkLogo} alt="logo" />
-          <h1 className="font-[300] font-poppins">
+          <h1 className="font-[300] font-poppins leading-[0px]">
             Echo<span className="font-medium">Link</span>
           </h1>
         </Link>
