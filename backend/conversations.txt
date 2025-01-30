@@ -1,9 +1,19 @@
-<CHAT_METADATA> Chat ID: c17c713d-05c4-4208-a3c1-8a1ac9d4f636, Chat Group ID: a0d8cfce-3193-4f17-a75b-f8f9d07e6386
+<CHAT_METADATA> Chat ID: f2d28330-86bb-4a4a-b591-73d25040756d, Chat Group ID: f790c1a6-1096-46c8-a1df-ba03c8f1b68d
 EVI: Hello, this is the disaster management call center.
+EVI: How may I assist you today?
+EVI: If you're experiencing an emergency situation, please let me know right away so I can provide the appropriate help.
 <USER_INTERRUPTION>
 <ASSISTANT_END>
-You: My name is Vishal. There's a flood near my house. I'm in Kutchi, Kerala.
+<ASSISTANT_END>
+You: Help me. I'm in a fire emergency right now. There's fire near me. My name is Pishananda, and I'm from Cochin. I'm leaving in RECCCA club Rekha Club.
+You: Please help. Please send help. I'm gonna see location right now, but I don't know when the fire might spread.
+EVI: I understand you're in a fire emergency, Pishananda.
+EVI: Please stay calm. I'm here to help you.
+EVI: Let's quickly go through some important information:
+EVI: First, are you in a safe location right now?
+EVI: If not, please evacuate immediately if it's safe to do so.
+EVI: You mentioned you're in Cochin, at the RECCCA club.
+EVI: Can you confirm the exact address or any nearby landmarks?
 <USER_INTERRUPTION>
 <ASSISTANT_END>
-You: Please send help. I'm cutting the call right now. Please cut the call right now.
-EVI: I understand you need to end the call quickly, Vishal.
+You: Yes. These landmarks are correct. Please end the call right now.

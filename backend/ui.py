@@ -3,11 +3,14 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from PyQt5.QtWebEngineWidgets import *
+import sqlite3
 
 
 class EmergencyDashboard(QWidget):
     def __init__(self):
         super().__init__()
+        
+        self.conversations = []
 
         self.setWindowTitle("Emergency Dashboard")
         self.setGeometry(100, 100, 2400, 1200)
@@ -39,19 +42,12 @@ class EmergencyDashboard(QWidget):
 
         # Current Calls 
 
-        current_calls_layout = QVBoxLayout()
+        
         current_calls_label = QLabel("Current Calls")
         current_calls_label.setFont(QFont('Arial', 16, QFont.Bold))
-
-        current_calls_layout.addWidget(current_calls_label)
-
-        calls = [("Heart attack on Maple Drive", "Critical"),
-                 ("Multiple people injured on 27th Street", "Critical"),
-                 ("Apartment fire on Main Street", "Moderate")]
-
-        for call in calls:
-            call_frame = self.create_call_item(call)
-            current_calls_layout.addWidget(call_frame)
+        
+        self.current_calls_layout = QVBoxLayout()
+              
 
         dispatch_layout = QVBoxLayout()
         dispatch_label = QLabel("Dispatch first responders:")
@@ -64,8 +60,12 @@ class EmergencyDashboard(QWidget):
         dispatch_layout.addWidget(police_btn)
         dispatch_layout.addWidget(firefighters_btn)
         dispatch_layout.addWidget(paramedics_btn)
+        
+        call_detail_layout = QVBoxLayout()
+        call_detail_layout.addWidget(current_calls_label)
+        call_detail_layout.addLayout(self.current_calls_layout)
 
-        left_layout.addLayout(current_calls_layout)
+        left_layout.addLayout(call_detail_layout)
         left_layout.addLayout(dispatch_layout)
         left_frame.setLayout(left_layout)
 
@@ -136,7 +136,7 @@ class EmergencyDashboard(QWidget):
         phone_layout.addWidget(record_button)
         
         # User Name
-        name_label = QLabel("Bradley Cooper")
+        name_label = QLabel("User Name")
         name_label.setFont(QFont("Arial", 16))
         
         # Location Info
@@ -195,6 +195,10 @@ class EmergencyDashboard(QWidget):
 
 
         self.setLayout(main_layout)
+        
+        self.timer = QTimer()
+        self.timer.timeout.connect(self.get_call_details)
+        self.timer.start(2000)
 
     def create_call_item(self, call_data):
         call_frame = QFrame(self)
@@ -212,6 +216,7 @@ class EmergencyDashboard(QWidget):
         call_layout.addWidget(call_label)
         call_layout.addWidget(badge_label)
         call_frame.setLayout(call_layout)
+        call_frame.click
 
         return call_frame
 
@@ -248,6 +253,26 @@ class EmergencyDashboard(QWidget):
         btn.setFixedHeight(80)
         btn.setCursor(Qt.CursorShape.PointingHandCursor)
         return btn
+    
+    def set_call_details(self, calls):
+        for i in reversed(range(self.current_calls_layout.count())):
+            self.current_calls_layout.itemAt(i).widget().deleteLater()
+        
+        for call in calls:
+            call_frame = self.create_call_item(call)
+            self.current_calls_layout.addWidget(call_frame)
+            
+    
+    def get_call_details(self):
+        conn = sqlite3.connect('conversation.db')
+        c = conn.cursor()
+        c.execute("SELECT * FROM conversations")
+        self.conversations = c.fetchall()
+        if len(self.conversations) > 0:
+            calls = []
+            for conversation in self.conversations:
+                calls.append((conversation[3], conversation[4]))
+            self.set_call_details(calls)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

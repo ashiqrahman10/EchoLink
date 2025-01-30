@@ -1,0 +1,45 @@
+2025-01-28 01:19:12,744 - hume._voice.mixins.chat_mixin - INFO - Connecting to EVI API at wss://api.hume.ai/v0/evi/chat?config_id=4489c9ec-4fc0-4109-a91a-e0bb1d7a3639
+2025-01-28 01:19:13,327 - hume._voice.microphone.microphone - INFO - device: 15
+2025-01-28 01:19:13,327 - hume._voice.microphone.microphone - INFO - sound_device: {'name': 'default', 'index': 15, 'hostapi': 0, 'max_input_channels': 32, 'max_output_channels': 32, 'default_low_input_latency': 0.008684807256235827, 'default_low_output_latency': 0.008684807256235827, 'default_high_input_latency': 0.034807256235827665, 'default_high_output_latency': 0.034807256235827665, 'default_samplerate': 44100.0}
+2025-01-28 01:19:13,421 - hume._voice.voice_socket - INFO - Updating session settings to: {'type': 'session_settings', 'audio': {'encoding': 'linear16', 'channels': 32, 'sample_rate': 44100}}
+2025-01-28 01:21:47,230 - __main__ - ERROR - Error recording conversation: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2025-01-28 01:21:47,230 - __main__ - WARNING - No conversation recorded
+2025-01-28 01:21:55,271 - hume._voice.mixins.chat_mixin - INFO - Connecting to EVI API at wss://api.hume.ai/v0/evi/chat?config_id=4489c9ec-4fc0-4109-a91a-e0bb1d7a3639
+2025-01-28 01:21:56,589 - hume._voice.microphone.microphone - INFO - device: 15
+2025-01-28 01:21:56,589 - hume._voice.microphone.microphone - INFO - sound_device: {'name': 'default', 'index': 15, 'hostapi': 0, 'max_input_channels': 32, 'max_output_channels': 32, 'default_low_input_latency': 0.008684807256235827, 'default_low_output_latency': 0.008684807256235827, 'default_high_input_latency': 0.034807256235827665, 'default_high_output_latency': 0.034807256235827665, 'default_samplerate': 44100.0}
+2025-01-28 01:21:56,679 - hume._voice.voice_socket - INFO - Updating session settings to: {'type': 'session_settings', 'audio': {'encoding': 'linear16', 'channels': 32, 'sample_rate': 44100}}
+2025-01-28 01:22:06,309 - __main__ - INFO - Program terminated by user
+2025-01-28 01:22:06,582 - asyncio - ERROR - Task was destroyed but it is pending!
+task: <Task pending name='Task-4' coro=<WebSocketCommonProtocol.close_connection() running at /home/vichukartha/Projects/EchoLink/backend/myenv/lib/python3.10/site-packages/websockets/legacy/protocol.py:1311> wait_for=<Future pending cb=[shield.<locals>._outer_done_callback() at /usr/lib/python3.10/asyncio/tasks.py:864, Task.task_wakeup()]> cb=[gather.<locals>._done_callback() at /usr/lib/python3.10/asyncio/tasks.py:720, shield.<locals>._inner_done_callback() at /usr/lib/python3.10/asyncio/tasks.py:847]>
+2025-01-28 01:27:22,715 - __main__ - INFO - Recording started... Speak now
+2025-01-28 01:28:19,933 - __main__ - INFO - Recording started... Speak now
+2025-01-28 01:41:49,350 - __main__ - INFO - Recording started... Speak now
+2025-01-28 01:48:29,940 - __main__ - INFO - Calibrating noise levels... Please remain silent
+2025-01-28 01:48:30,913 - __main__ - INFO - Noise calibration complete
+2025-01-28 01:48:30,914 - __main__ - INFO - Recording started... Speak now
+2025-01-28 01:49:11,833 - __main__ - INFO - Recording finished
+2025-01-28 01:49:11,837 - __main__ - INFO - Enhancing audio quality...
+2025-01-28 01:49:22,367 - __main__ - INFO - Saved original audio to call_original_20250128_014922.wav
+2025-01-28 01:49:22,367 - __main__ - INFO - Saved enhanced audio to call_enhanced_20250128_014922.wav
+2025-01-28 01:49:32,538 - httpx - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-01-28 01:49:32,544 - __main__ - ERROR - Error in conversation analysis: Expecting value: line 1 column 1 (char 0)
+2025-01-28 01:49:32,546 - __main__ - ERROR - Error handling call: table conversations has no column named audio_file
+2025-01-28 01:49:32,546 - __main__ - WARNING - Failed to process emergency call
+2025-01-28 08:42:41,450 - hume._voice.mixins.chat_mixin - INFO - Connecting to EVI API at wss://api.hume.ai/v0/evi/chat?config_id=4489c9ec-4fc0-4109-a91a-e0bb1d7a3639
+2025-01-28 08:42:42,261 - hume._voice.microphone.microphone - INFO - device: 15
+2025-01-28 08:42:42,262 - hume._voice.microphone.microphone - INFO - sound_device: {'name': 'default', 'index': 15, 'hostapi': 0, 'max_input_channels': 32, 'max_output_channels': 32, 'default_low_input_latency': 0.008684807256235827, 'default_low_output_latency': 0.008684807256235827, 'default_high_input_latency': 0.034807256235827665, 'default_high_output_latency': 0.034807256235827665, 'default_samplerate': 44100.0}
+2025-01-28 08:42:42,351 - hume._voice.voice_socket - INFO - Updating session settings to: {'type': 'session_settings', 'audio': {'encoding': 'linear16', 'channels': 32, 'sample_rate': 44100}}
+2025-01-28 08:44:33,310 - __main__ - ERROR - Error recording conversation: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2025-01-28 08:44:33,310 - __main__ - WARNING - No conversation recorded
+2025-01-28 08:44:59,019 - hume._voice.mixins.chat_mixin - INFO - Connecting to EVI API at wss://api.hume.ai/v0/evi/chat?config_id=4489c9ec-4fc0-4109-a91a-e0bb1d7a3639
+2025-01-28 08:45:01,243 - hume._voice.microphone.microphone - INFO - device: 15
+2025-01-28 08:45:01,244 - hume._voice.microphone.microphone - INFO - sound_device: {'name': 'default', 'index': 15, 'hostapi': 0, 'max_input_channels': 32, 'max_output_channels': 32, 'default_low_input_latency': 0.008684807256235827, 'default_low_output_latency': 0.008684807256235827, 'default_high_input_latency': 0.034807256235827665, 'default_high_output_latency': 0.034807256235827665, 'default_samplerate': 44100.0}
+2025-01-28 08:45:01,468 - hume._voice.voice_socket - INFO - Updating session settings to: {'type': 'session_settings', 'audio': {'encoding': 'linear16', 'channels': 32, 'sample_rate': 44100}}
+2025-01-28 08:46:59,716 - __main__ - ERROR - Error recording conversation: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2025-01-28 08:46:59,717 - __main__ - WARNING - No conversation recorded
+2025-01-28 08:47:02,704 - hume._voice.mixins.chat_mixin - INFO - Connecting to EVI API at wss://api.hume.ai/v0/evi/chat?config_id=4489c9ec-4fc0-4109-a91a-e0bb1d7a3639
+2025-01-28 08:47:03,829 - hume._voice.microphone.microphone - INFO - device: 13
+2025-01-28 08:47:03,830 - hume._voice.microphone.microphone - INFO - sound_device: {'name': 'default', 'index': 13, 'hostapi': 0, 'max_input_channels': 32, 'max_output_channels': 32, 'default_low_input_latency': 0.008684807256235827, 'default_low_output_latency': 0.008684807256235827, 'default_high_input_latency': 0.034807256235827665, 'default_high_output_latency': 0.034807256235827665, 'default_samplerate': 44100.0}
+2025-01-28 08:47:03,910 - hume._voice.voice_socket - INFO - Updating session settings to: {'type': 'session_settings', 'audio': {'encoding': 'linear16', 'channels': 32, 'sample_rate': 44100}}
+2025-01-28 08:49:07,934 - __main__ - ERROR - Error recording conversation: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2025-01-28 08:49:07,935 - __main__ - WARNING - No conversation recorded
